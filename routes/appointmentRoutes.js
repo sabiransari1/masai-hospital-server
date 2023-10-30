@@ -16,7 +16,7 @@ appointmentRoutes.post('/bookappointment', async (req, res) => {
   }
 });
 
-appointmentRoutes.post('/getappointments', async (req, res) => {
+appointmentRoutes.get('/getappointments', async (req, res) => {
   try {
     const appointments = await appointmentModel.find({});
 
