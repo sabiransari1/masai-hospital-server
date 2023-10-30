@@ -4,6 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 const connection = require('./db.js');
 const userRoutes = require('./routes/userRoutes.js');
+const appointmentRoutes = require('./routes/appointmentRoutes.js');
 
 app.use(express.json());
 app.use(express.text());
@@ -18,6 +19,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/user', userRoutes);
+app.use('/appointment', appointmentRoutes);
 
 app.listen(process.env.PORT || 7070, () => {
   try {
