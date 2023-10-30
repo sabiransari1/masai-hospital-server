@@ -11,7 +11,7 @@ app.use(cors());
 
 app.get('/', (req, res) => {
   try {
-    return res.status(200).send('Masai Hosptail ...');
+    return res.status(200).send('Masai Hospital ...');
   } catch (error) {
     return res.status(400).send({ error: error.message });
   }

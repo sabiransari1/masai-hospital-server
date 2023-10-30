@@ -38,7 +38,7 @@ userRoutes.post('/login', async (req, res) => {
     if (passwordCheck) {
       const token = jwt.sign({ userId: userCheck.id }, process.env.SECRET_KEY);
 
-      return res.status(200).send({ msg: 'User Signup Successfull', token });
+      return res.status(200).send({ msg: 'User Login Successfull', token });
     } else {
       return res.status(400).send({ msg: 'Incorrect Password' });
     }
